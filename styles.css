@@ -26,3 +26,10 @@ body {
 .content {
     padding: 20px;
 }
+
+.profile-pic {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: creates a circular profile picture */
+    margin: 10px 0;
+}
