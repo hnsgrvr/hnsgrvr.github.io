@@ -33,3 +33,22 @@ body {
     border-radius: 50%; /* Optional: creates a circular profile picture */
     margin: 10px 0;
 }
+
+.experience-section {
+    margin: 0 0 20px;
+}
+
+.experience-section h2 {
+    margin-top: 0;
+}
+
+.experience-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-section li h4 {
+    margin: 10px 0 5px;
+}
+
+/* Ensure existing styles like .navbar are included */
