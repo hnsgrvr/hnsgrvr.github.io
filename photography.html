@@ -21,5 +21,24 @@
         <div class="photo"><img src="photographs/backlit buildings.JPG" alt="alt"></div>
         <div class="photo"><img src="photographs/surreal zoom.JPG" alt="alt"></div>
     </div>
+
+    window.onload = function() {
+        const photos = document.querySelectorAll('.photo img');
+    
+        photos.forEach(photo => {
+            photo.onload = function() {
+                const aspectRatio = this.naturalWidth / this.naturalHeight;
+                
+                if (aspectRatio >= 1) {
+                    // It's landscape or square
+                    this.parentElement.style.gridRowEnd = 'span 1';
+                } else {
+                    // It's portrait
+                    this.parentElement.style.gridRowEnd = 'span 2';
+                }
+            };
+        });
+    };
+    
 </body>
 </html>

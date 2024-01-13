@@ -61,17 +61,17 @@ body {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 15px;
     padding: 20px;
-    margin-top: 60px; /* Adjust based on navbar height */
 }
 
 .photo img {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Optional, for rounded corners */
+    display: block;
 }
+
 
 @media screen and (max-width: 800px) {
     .photo-grid {
