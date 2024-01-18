@@ -1,0 +1,13 @@
+.job-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the space between elements */
+}
+
+.job-title hr {
+    width: 1px; /* Medium thickness for the line */
+    height: 20px; /* Adjust the height as needed */
+    background-color: black; /* Color of the line */
+    border: none; /* Remove default border */
+    margin: 0; /* Remove default margin */
+}
