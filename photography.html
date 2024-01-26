@@ -13,7 +13,6 @@
         <a href="photography.html">Photography</a>
         <a href="experience.html">Experience</a>
     </div>
-
     <div class="photo-grid">
         <div class="photo"><img src="photographs/city spotlight.JPG" alt="alt"></div>
         <div class="photo"><img src="photographs/fireworks.JPG" alt="alt"></div>
@@ -66,8 +65,29 @@
         <div class="photo"><img src="photographs/DSC09338.JPG" alt="DSC09338"></div>
         <div class="photo"><img src="photographs/DSC09921.JPG" alt="DSC09921"></div>
         <div class="photo"><img src="photographs/DSC09993.JPG" alt="DSC09993"></div>
-
     </div>
+    
+    <!-- fetch images programmatically, only works when hosted -->
+    <!-- <script>
+        fetch('photographs/filenameList.json')
+            .then(response => response.json())
+            .then(images => {
+                const photoGrid = document.querySelector('.photo-grid');
+                
+                images.forEach(image => {
+                    const photoDiv = document.createElement('div');
+                    photoDiv.className = 'photo';
+                    const img = document.createElement('img');
+                    img.src = `photographs/${image}`;
+                    img.alt = image;
+                    photoDiv.appendChild(img);
+                    photoGrid.appendChild(photoDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching the image list:', error);
+            });
+    </script> -->
 
     <script>
         window.onload = function() {

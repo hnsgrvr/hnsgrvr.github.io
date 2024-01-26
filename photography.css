@@ -2,11 +2,16 @@ body {
     background-color: #4b4b4b; 
 }
 
+.photo-grid-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+  }
+
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 200px; /* Height for landscape images, adjust as necessary */
-    grid-gap: 10px; /* Adjust the space between the images */
+    grid-template-columns: repeat(auto-fill, minmax(30vh, 1fr));
+    grid-auto-rows: 20vh; 
+    grid-gap: .5vh; /* Adjust the space between the images */
 }
 
 .photo {
