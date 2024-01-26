@@ -58,19 +58,6 @@ body {
     margin-top: 15px;
 }
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 15px;
-    padding: 20px;
-}
-
-.photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 
 @media screen and (max-width: 800px) {
     .photo-grid {

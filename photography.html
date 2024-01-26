@@ -70,25 +70,32 @@
     </div>
 
     <script>
-
         window.onload = function() {
-            const photos = document.querySelectorAll('.photo img');
-        
-            photos.forEach(photo => {
-                photo.onload = function() {
-                    const aspectRatio = this.naturalWidth / this.naturalHeight;
-                    
-                    if (aspectRatio >= 1) {
-                        // It's landscape or square
-                        this.parentElement.style.gridRowEnd = 'span 1';
-                    } else {
-                        // It's portrait
-                        this.parentElement.style.gridRowEnd = 'span 2';
-                    }
-                };
-            });
+        const photos = document.querySelectorAll('.photo-grid .photo img');
+    
+        photos.forEach(photo => {
+            // If the image is already loaded or when it finishes loading
+            if (photo.complete) {
+            setAspectRatio(photo);
+            } else {
+            photo.onload = function() {
+                setAspectRatio(photo);
+            };
+            }
+        });
         };
-
+    
+        function setAspectRatio(img) {
+        const aspectRatio = img.naturalWidth / img.naturalHeight;
+        
+        if (aspectRatio >= 1) {
+            // It's landscape or square, so it takes up one row.
+            img.parentElement.style.gridRowEnd = 'span 1';
+        } else {
+            // It's portrait, so it should take up two rows.
+            img.parentElement.style.gridRowEnd = 'span 2';
+        }
+        }
     </script>
     
     
