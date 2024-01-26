@@ -86,15 +86,15 @@
         };
     
         function setAspectRatio(img) {
-        const aspectRatio = img.naturalWidth / img.naturalHeight;
-        
-        if (aspectRatio >= 1) {
-            // It's landscape or square, so it takes up one row.
-            img.parentElement.style.gridRowEnd = 'span 1';
-        } else {
-            // It's portrait, so it should take up two rows.
-            img.parentElement.style.gridRowEnd = 'span 2';
-        }
+            const aspectRatio = img.naturalWidth / img.naturalHeight;
+            
+            if (aspectRatio >= 1) {
+                // It's landscape or square, so it takes up one row.
+                img.parentElement.style.gridRowEnd = 'span 1';
+            } else {
+                // It's portrait, so it should take up two rows.
+                img.parentElement.style.gridRowEnd = 'span 2';
+            }
         }
     </script>
     
