@@ -5,18 +5,17 @@ body {
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 200px; /* Height for landscape images, adjust as necessary */
-    grid-gap: 10px; /* Adjust the space between the images */
-    row-gap: 20px;
-}
+    grid-auto-rows: 1px; /* Minimal initial height to allow content to dictate size */
+    grid-gap: 10px;
+  }
 
-.photo {
-    display: block;
+  .photo {
     overflow: hidden;
-}
-
-.photo img {
     width: 100%;
-    display: block; /* Remove extra space below the image */
-    object-fit: cover; /* Cover the area without stretching */
-}
+  }
+
+  .photo img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
