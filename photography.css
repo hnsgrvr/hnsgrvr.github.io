@@ -9,9 +9,9 @@ body {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30vh, 1fr));
-    grid-auto-rows: 20vh; 
-    grid-gap: .5vh; /* Adjust the space between the images */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 210px; 
+    grid-gap: 0px; /* Adjust the space between the images */
 }
 
 .photo {
